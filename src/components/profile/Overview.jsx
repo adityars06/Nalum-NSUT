@@ -1,6 +1,8 @@
 import React from 'react'
+import { useOutletContext } from "react-router-dom";
 
 function Overview() {
+  const {name}=useOutletContext();
   return (
     <div className='flex'>
       <div class="bg-gray-100">
@@ -12,7 +14,7 @@ function Overview() {
                         <img src="https://media.licdn.com/dms/image/v2/D5603AQH027O_6Shr9g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727093683687?e=1741824000&v=beta&t=EQdzwJu2XJELBWycwJX_eL_WWpv4-RG_nHMR46ZpsxM" class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0">
 
                         </img>
-                        <h1 class="text-xl font-bold">Aditya Raj Singh</h1>
+                        <h1 class="text-xl font-bold">{name}</h1>
                         <p class="text-gray-700">Software Developer</p>
                         <div class="mt-6 flex flex-wrap gap-4 justify-center">
                             <a href="#" class="bg-crimson hover:bg-brick text-white py-2 px-4 rounded">Contact</a>

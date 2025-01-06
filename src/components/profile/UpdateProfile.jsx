@@ -1,6 +1,11 @@
 import React from 'react'
+import { useOutletContext } from "react-router-dom";
 
 function UpdateProfile() {
+  const { name, setName } = useOutletContext();
+  const handleChange=(e)=>{
+    setName(e.target.value);
+  }
   return (
     <div className="flex flex-col gap-6 bg-white p-6 shadow-lg rounded-lg w-full">
       <h2 className="text-xl font-bold text-gray-800">Update Profile</h2>
@@ -9,6 +14,8 @@ function UpdateProfile() {
       <div className='name'>
         <label className="block font-medium text-gray-700">Name</label>
         <input
+          onChange={handleChange}
+          value={name}
           type="text"
           className="mt-1 p-2 border border-gray-300 rounded w-full"
           placeholder="Enter your name"
