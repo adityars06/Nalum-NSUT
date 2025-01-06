@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button{
+  @apply bg-[#B43737] text-white font-medium p-2  rounded hover:bg-[#922d2d] focus:outline-none focus:ring-2 focus:ring-[#b95c5c] active:bg-[#7a2626]
+}
+
+.sideNav{
+  @apply font-bold w-44  my-10 mx-5 font-mono text-lg bg-crimson text-center py-1.5 px-4 rounded-lg hover:bg-brick active:opacity-80 active:shadow-lg
+}
