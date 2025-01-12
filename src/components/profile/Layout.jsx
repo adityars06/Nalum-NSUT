@@ -1,16 +1,21 @@
 import React, { useState } from 'react'
 import { Outlet,useOutletContext} from 'react-router-dom'
 import SideNav from './SideNav'
+import UserProvider from '../../context/userContext'
 
 
 function Layout() {
-  const [name,setName]=useState('Aditya Raj Singh');
+  
   return (
-    <div className='flex'>
-      <SideNav/>
-      <Outlet context={{name,setName}}/>
+      <UserProvider>
+        <div className='flex'>
+        <SideNav/>
+        <Outlet/>
+        </div>
+      </UserProvider>
       
-    </div>
+    
+    
   )
 }
 

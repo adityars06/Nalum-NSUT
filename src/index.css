@@ -9,3 +9,4 @@
 .sideNav{
   @apply font-bold w-44  my-10 mx-5 font-mono text-lg bg-crimson text-center py-1.5 px-4 rounded-lg hover:bg-brick active:opacity-80 active:shadow-lg
 }
+
